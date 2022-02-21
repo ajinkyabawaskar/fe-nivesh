@@ -1,0 +1,179 @@
+.flex-2 {
+  position: relative;
+  float: right;
+  bottom: -2rem;
+  background-image: url("../../../assets/landing/money-bag.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 10rem;
+  height: 10rem;
+}
+
+.px-15 {
+  padding-left: 0.75rem;
+  padding-right: 2rem;
+}
+
+.hero-title {
+  font-family: "Playfair Display";
+  margin-top: 0.7rem;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.hero {
+  height: 30rem;
+  background-image: url("../../../assets/landing/waves.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba($color: #38c6f2, $alpha: 0.05);
+}
+
+.hero-container {
+  padding-left: 1.2rem;
+  padding-top: 2rem;
+}
+
+.hero-subtitle {
+  color: rgba($color: #000000, $alpha: 0.7);
+}
+
+.hero-image {
+  // padding-top: 18rem;
+  width: 8.2rem;
+  // margin-right: 2rem;
+}
+
+.fancy {
+  margin-top: 0.5rem;
+  font-size: 2.25rem;
+  line-height: 2.4rem;
+  font-weight: 550;
+  font-style: italic;
+}
+
+.hero-hint {
+  margin-top: 1rem;
+  color: rgba($color: #000000, $alpha: 0.7);
+}
+
+.primary-cta {
+  margin-top: 1.3rem;
+}
+
+.mat-themed-red {
+  background-color: rgba($color: #0174cc, $alpha: 1);
+  color: rgba($color: #ffffff, $alpha: 1);
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .px-15 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .hero-container {
+    // padding-left: 7rem;
+    padding-top: 2.3rem;
+  }
+
+  .hero-title {
+    margin-top: 0.7rem;
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+
+  .fancy {
+    margin-top: 0;
+    font-size: 3rem;
+    line-height: 3.3rem;
+  }
+
+  .hero {
+    height: 25rem;
+    background-position-y: 0rem;
+  }
+
+  .hero-image {
+    // padding-top: 8.5rem;
+    width: 12rem;
+    // margin-right: 0;
+  }
+
+  .flex-2 {
+    bottom: 6rem;
+    width: 11rem;
+    height: 11rem;
+  }
+
+  .px-15 {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .hero-container {
+    // padding-left: 7rem;
+    padding-top: 2.3rem;
+  }
+
+  .hero-title {
+    margin-top: 0.7rem;
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+
+  .fancy {
+    margin-top: 0;
+    font-size: 3rem;
+    line-height: 3.3rem;
+  }
+
+  .hero {
+    height: 25rem;
+    background-position-y: -8rem;
+  }
+
+  .hero-image {
+    // padding-top: 8.5rem;
+    width: 12rem;
+    // margin-right: 0;
+  }
+
+  .flex-2 {
+    bottom: 6rem;
+    width: 11rem;
+    height: 11rem;
+  }
+
+  .px-15 {
+    padding-left: 15rem;
+    padding-right: 15rem;
+  }
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {
+  .hero {
+    background-position-y: -14rem;
+  }
+  .flex-2 {
+    bottom: 5rem;
+    width: 10rem;
+    height: 10rem;
+    // left: 45rem;
+  }
+}

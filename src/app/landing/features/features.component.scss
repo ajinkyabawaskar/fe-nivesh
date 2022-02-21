@@ -1,0 +1,273 @@
+.automated {
+  background-image: url("../../../assets/landing/statement.svg");
+}
+
+.analytics {
+  background-image: url("../../../assets/landing/analytics.png");
+}
+
+.transactions {
+  background-image: url("../../../assets/landing/insights.png");
+}
+
+.private {
+  background-image: url("../../../assets/landing/shield.png");
+}
+
+.encrypted {
+  background-image: url("../../../assets/landing/data.png");
+}
+
+.opt-out {
+  background-image: url("../../../assets/landing/choice.png");
+}
+
+.features-container {
+  padding-top: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.circle {
+  flex: 1;
+  height: 7rem;
+  width: 12rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.circle-2 {
+  flex: 1;
+  height: 5rem;
+  width: 1rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.feature-title {
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.feature-headline {
+  font-family: "Playfair Display";
+  line-height: 2.25rem;
+  font-size: 1.5rem;
+}
+
+.how-it-works {
+  align-items: center;
+  // flex: 1;
+}
+
+.items {
+  margin-left: 3rem;
+}
+
+.hiw-title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.number-title {
+  font-size: 1.2rem;
+}
+
+.feature-sub-headline {
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  margin-bottom: 1.25rem;
+  color: rgba($color: #000000, $alpha: 0.7);
+}
+
+.feature-content {
+  flex: 2.5;
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+}
+
+.how-it-works-card {
+  height: 20rem;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.dynamic-flex {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.number-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.75rem;
+  text-align: center;
+  background-color: #009fe5;
+  color: #ffffff;
+}
+
+.wave2 {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.75),
+      rgba(255, 255, 255, 0.75)
+    ),
+    url("../../../assets/landing/cornered-waves3.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-clip: content-box;
+  background-position: center;
+}
+
+.bg-wave {
+  background-image: url("../../../assets/landing/wave.svg");
+  width: 20%;
+  height: 1rem;
+  background-size: contain;
+  background-repeat: repeat-x;
+  background-position: center;
+}
+
+.how-it-works-video {
+  flex: 1;
+  margin-top: 2.5rem;
+}
+
+.dummy-video {
+  width: 23rem;
+  height: 15rem;
+  // border: 1px solid black;
+  // background-color: black;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.holder {
+  /* Clip edges, as some of the lines don't terminate nicely. */
+  overflow: hidden;
+  position: relative;
+  width: 200px;
+  height: 50px;
+}
+
+.ellipse {
+  position: absolute;
+  background: radial-gradient(
+    ellipse,
+    transparent,
+    transparent 7px,
+    black 7px,
+    black 10px,
+    transparent 11px
+  );
+  background-size: 36px 40px;
+  width: 200px;
+  height: 20px;
+}
+
+.ellipse2 {
+  top: 20px;
+  left: 18px;
+  background-position: 0px -20px;
+}
+
+.request-btn {
+  // background-color: #0174cc;
+  padding: 1rem 0rem;
+  line-height: 1rem;
+}
+
+.prefix-flag {
+  width: 20px;
+  height: 15px;
+}
+
+.pricing-zero {
+  font-size: 3rem;
+  font-weight: 300;
+  // margin-bottom: 1rem;
+}
+
+.pricing-duration {
+  font-size: 1rem;
+}
+
+.free-text {
+  display: none;
+  color: #fff;
+  background-color: #0174ccbb;
+  padding: 2px 7px;
+  font-size: 0.75rem;
+  border-radius: 5px;
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .request-btn {
+    padding: 1.2rem 0rem;
+  }
+
+  .bg-wave {
+    width: 7%;
+  }
+  .features-container {
+    padding-top: 1rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  .feature-content {
+    margin-top: 0.8rem;
+  }
+
+  .dynamic-flex {
+    flex-direction: row;
+  }
+
+  .how-it-works-video {
+    margin-top: 0rem;
+  }
+
+  .dummy-video {
+    width: 28rem;
+  }
+
+  .how-it-works {
+    align-items: center;
+  }
+
+  .wave2 {
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0.75),
+        rgba(255, 255, 255, 0.75)
+      ),
+      url("../../../assets/landing/cornered-waves3.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {
+}

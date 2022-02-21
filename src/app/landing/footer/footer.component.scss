@@ -1,0 +1,52 @@
+.landing-footer {
+  // margin-top: 2rem;
+  width: 100%;
+  background: hsl(206, 99%, 40%);
+  color: #ffffff;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.footer-title {
+  font-size: 1.75rem;
+  font-family: "Playfair Display";
+  // font-style: italic;
+}
+
+.footer-subtitle {
+  font-family: "Playfair Display";
+}
+
+.company-text {
+  font-size: 1.05rem;
+}
+
+.icon-social {
+  height: 16px;
+  width: 16px;
+  margin-right: 10px;
+  background-size: cover;
+  // background-repeat: no-repeat;
+}
+.icon-instagram {
+  background-image: url("../../../assets/landing/instagram.svg");
+}
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {
+}

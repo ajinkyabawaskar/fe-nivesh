@@ -1,0 +1,22 @@
+<mat-toolbar class="d-flex justify-content-between navbar-bg sticky-top nav-margin">
+
+    <div class="app-title" routerLink="/">
+        {{title}}
+    </div>
+
+    <button mat-button (click)="openSigninDialogue()">Sign In</button>
+    <!-- <div fxLayout="row" fxShow="false" fxShow.gt-sm>
+        <button mat-button routerLink="/">Blog</button>
+        <button *ngIf="!isLoginPage" mat-button (click)="openDialog()">My Account</button>
+    </div> -->
+    <!--
+    <button mat-button [mat-menu-trigger-for]="menu" fxHide="false" fxHide.gt-sm>
+        <mat-icon>menu</mat-icon>
+    </button> -->
+
+</mat-toolbar>
+
+<!-- <mat-menu x-position="before" #menu="matMenu">
+    <button mat-menu-item routerLink="/">Blog</button>
+    <button *ngIf="!isLoginPage" mat-menu-item (click)="openDialog()">My Account</button>
+</mat-menu> -->

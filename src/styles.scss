@@ -1,0 +1,81 @@
+@use "@angular/material" as mat;
+@include mat.core();
+// bootstrap reboot, grid & margin-spacing utilities
+@import "bootstrap/dist/css/bootstrap-reboot.min.css";
+@import "bootstrap/dist/css/bootstrap-grid.min.css";
+@import "bootstrap/dist/css/bootstrap-utilities.min.css";
+
+// Change default font
+@import "@angular/material/theming";
+$inter-typography: mat-typography-config(
+  $font-family: "Inter"
+);
+@include angular-material-typography($inter-typography);
+
+$theme-red: #fa7268;
+$theme-dark-red: #c62368;
+
+/* For use in src/lib/core/theming/_palette.scss */
+$nivesh-palette: (
+  50: #e1eef9,
+  100: #b3d5f0,
+  200: #80bae6,
+  300: #4d9edb,
+  400: #2789d4,
+  500: #0174cc,
+  600: #016cc7,
+  700: #0161c0,
+  800: #0157b9,
+  900: #0044ad,
+  A100: #d7e4ff,
+  A200: #a4c1ff,
+  A400: #719eff,
+  A700: #588dff,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  ),
+);
+
+$nivesh-primary: mat.define-palette($nivesh-palette, 500);
+$nivesh-accent: mat.define-palette($nivesh-palette, 600, 700, 800);
+
+// The "warn" palette is optional and defaults to red if not specified.
+$nivesh-warn: mat.define-palette(mat.$red-palette);
+
+$nivesh-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $nivesh-primary,
+      accent: $nivesh-accent,
+      warn: $nivesh-warn,
+    ),
+  )
+);
+
+// Emit theme-dependent styles for common features used across multiple components.
+@include mat.core-theme($nivesh-theme);
+
+// Emit styles for MatButton based on `$nivesh-theme`. Because the configuration
+// passed to `define-light-theme` omits typography, `button-theme` will not
+// emit any typography styles.
+@include mat.all-component-themes($nivesh-theme);
+
+body {
+  text-rendering: auto;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+}
+

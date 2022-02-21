@@ -1,0 +1,132 @@
+.navbar-bg {
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(5px);
+}
+
+::ng-deep.mat-menu-panel {
+  max-width: none !important;
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .mini-chart {
+    top: -42px;
+    left: 94px;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .mini-chart {
+    top: -60px;
+    left: 135px;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .mini-chart {
+    top: -40px;
+    left: 75px;
+  }
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .mini-chart {
+    top: -50px;
+    left: 110px;
+  }
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {
+  .mini-chart {
+    top: -50px;
+    left: 127px;
+  }
+}
+
+.fancy {
+  border: 1px solid lightgray;
+  // padding: 14px 18px;
+  border-radius: 16px;
+  min-height: 180px;
+  max-height: 180px;
+  overflow: hidden;
+}
+
+#portfolio_chart {
+  position: relative;
+  bottom: -11px;
+  transform: scaleX(1.04);
+}
+
+.beta_chart {
+  position: relative;
+  left: -5px;
+  bottom: -23px;
+}
+
+.nav-button {
+  border: 1px solid lightgray;
+  border-radius: 18px;
+}
+
+.portfolio-title-text {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.total-portfolio-amount {
+  position: absolute;
+  font-size: 1.75rem;
+  font-family: "Questrial", sans-serif;
+}
+
+.total-portfolio-amount-text {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.portfolio-amount-rupee-sign {
+  font-size: 1rem;
+  margin-right: 3px;
+}
+
+.beta-title-text {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.beta-value {
+  font-size: 2rem;
+}
+
+.beta-details {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+  font-family: "Questrial", sans-serif;
+}
+
+.beta-desc-text {
+  font-family: "Inter", sans-serif;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+.guage-text {
+  position: relative;
+  top: 0;
+}
+
+.mini-chart {
+  width: 50%;
+  position: relative;
+}

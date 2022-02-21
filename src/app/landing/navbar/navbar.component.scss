@@ -1,0 +1,57 @@
+.navbar-bg {
+  background-color: rgba(255, 255, 255, 0.8);
+  // filter: blur(10px);
+
+  backdrop-filter: blur(5px);
+}
+
+::ng-deep mat-menu {
+  width: 190px;
+}
+
+mat-menu {
+  z-index: 1;
+}
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .app-title {
+    padding-left: 6.6rem;
+  }
+  .nav-margin {
+    padding-right: 6.6rem;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .app-title {
+    padding-left: 8.3rem;
+  }
+  .nav-margin {
+    padding-right: 8.3rem;
+  }
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .app-title {
+    padding-left: 10.6rem;
+  }
+  .nav-margin {
+    padding-right: 10.6rem;
+  }
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {
+  .app-title {
+    padding-left: 14.6rem;
+  }
+  .nav-margin {
+    padding-right: 14.6rem;
+  }
+}
