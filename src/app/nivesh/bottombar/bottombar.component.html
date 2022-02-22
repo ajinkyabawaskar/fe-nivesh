@@ -1,0 +1,20 @@
+<div class="container-fluid bottombar">
+    <div class="row">
+        <div class="col-12">
+            <div class="d-flex align-items-center justify-content-around">
+                <ng-container *ngFor="let item of bottomNavs">
+                    <div class="">
+                        <button mat-flat-button class="bottombar-button" [ngClass]="{'border': item.isActive}" [routerLink]="[item.link]">
+                            <div class="" *ngIf="!item.isActive">
+                                <i class="bi {{item.icon}}"></i>
+                            </div>
+                            <div class="" *ngIf="item.isActive">
+                                {{item.displayText}}
+                            </div>
+                        </button>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
 import { NiveshUser } from '../model/user.model';
 import { nifty } from '../services/stock.service';
-import { UserService } from '../services/user.service';
 import { WindowService } from '../services/window.service';
 
 @Component({
@@ -10,6 +10,39 @@ import { WindowService } from '../services/window.service';
   styleUrls: ['./nivesh.component.scss'],
 })
 export class NiveshComponent {
+  navigationMenus: any[] = [
+    {
+      displayText: 'Home',
+      icon: 'bi-house',
+      link: '/app',
+      isActive: false,
+    },
+    {
+      displayText: 'Update',
+      icon: 'bi-pencil',
+      link: '/app/edit',
+      isActive: false,
+    },
+    {
+      displayText: 'Experiment',
+      icon: 'bi-plus-slash-minus',
+      link: '/app/experiment',
+      isActive: false,
+    },
+    {
+      displayText: 'Profile',
+      icon: 'bi-person',
+      link: '/app/profile',
+      isActive: false,
+    },
+    {
+      displayText: 'Settings',
+      icon: 'bi-gear',
+      link: '/app/settings',
+      isActive: false,
+    },
+  ];
+
   isMobile: boolean = false;
   title: string = 'Nivesh';
   private user: NiveshUser;
@@ -157,16 +190,28 @@ export class NiveshComponent {
     },
   };
 
-  constructor(private windowService: WindowService) {
+  constructor(private windowService: WindowService, private router: Router) {
     this.windowService.isMobile().subscribe((isMobile: boolean) => {
       this.isMobile = isMobile;
-    })
+    });
     let i = 0;
     nifty['data'][0]['points'].forEach((point) => {
       // this.x[i] = point['ts'];
       this.x[i] = i;
       this.y[i] = point['lp'];
       i++;
+    });
+
+    this.router.events.subscribe((ev) => {
+      if (ev instanceof NavigationEnd) {
+        this.navigationMenus.forEach((menu) => {
+          if (menu.link === ev.url) {
+            menu.isActive = true;
+          } else {
+            menu.isActive = false;
+          }
+        });
+      }
     });
   }
 }

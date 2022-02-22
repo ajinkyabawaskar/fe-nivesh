@@ -1,0 +1,20 @@
+.bottombar {
+    position: sticky;
+    padding-top: 10px;
+    padding-bottom: 12px;
+    bottom: 0;
+    right: 0;
+    left:0;
+    background-color: white;
+    box-shadow: 0px -15px 10px -15px rgb(0 0 0 / 20%);
+}
+
+.bottombar-text {
+    // margin-top: -14px;
+    font-size: smaller;
+}
+
+.bottombar-button {
+    border-radius: 999px;
+    transition: width 1s ease-in-out;
+}

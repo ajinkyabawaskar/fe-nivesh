@@ -1,9 +1,10 @@
 <div class="container-fluid pe-0">
     <div class="row">
-        <ng-container *ngFor="let item of [1,2,3,4]">
-            <div class="col-12 mb-4">
-                <button mat-flat-button class="w-100 fancy">
-                    Nav Menu #{{item}}
+        <ng-container *ngFor="let item of sidebarMenus">
+            <div class="col-12 mb-3">
+                <button mat-flat-button class="w-100 fancy" [routerLink]="[item.link]">
+                    <i class="bi {{item.icon}} me-2"></i>
+                    <span class="ms-1">{{item.displayText}}</span>
                 </button>
             </div>
         </ng-container>

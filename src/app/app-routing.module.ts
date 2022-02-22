@@ -8,6 +8,10 @@ import { AuthGuard } from './helpers/auth.guard';
 const routes: Routes = [
   { path: '', component: LandingComponent },
   { path: 'app', component: NiveshComponent, canActivate: [AuthGuard] },
+  { path: 'app/edit', component: NiveshComponent, canActivate: [AuthGuard] },
+  { path: 'app/experiment', component: NiveshComponent, canActivate: [AuthGuard] },
+  { path: 'app/profile', component: NiveshComponent, canActivate: [AuthGuard] },
+  { path: 'app/settings', component: NiveshComponent, canActivate: [AuthGuard] },
   // { path: '', redirectTo: '', pathMatch: 'full' },
 ];
 

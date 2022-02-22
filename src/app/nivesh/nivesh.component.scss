@@ -1,17 +1,31 @@
-.navbar-bg {
-  background-color: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(5px);
+
+.fancy {
+  border: 1px solid lightgray;
+  // padding: 14px 18px;
+  border-radius: 16px;
+  min-height: 120px;
+  max-height: 120px;
+  overflow: hidden;
 }
 
-::ng-deep.mat-menu-panel {
-  max-width: none !important;
+.mini-chart {
+  width: 60%;
+  position: relative;
+  top: -90px;
+  right: -45px;
 }
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
   .mini-chart {
+    width: 50%;
     top: -42px;
     left: 94px;
+  }
+
+  .fancy {
+    min-height: 180px;
+    max-height: 180px;
   }
 }
 
@@ -19,7 +33,7 @@
 @media (min-width: 768px) {
   .mini-chart {
     top: -60px;
-    left: 135px;
+    left: 100px;
   }
 }
 
@@ -43,34 +57,24 @@
 @media (min-width: 1400px) {
   .mini-chart {
     top: -50px;
-    left: 127px;
+    left: 120px;
   }
 }
 
-.fancy {
-  border: 1px solid lightgray;
-  // padding: 14px 18px;
-  border-radius: 16px;
-  min-height: 180px;
-  max-height: 180px;
-  overflow: hidden;
-}
+
 
 #portfolio_chart {
   position: relative;
   bottom: -11px;
   transform: scaleX(1.04);
+  z-index: -1;
 }
 
 .beta_chart {
   position: relative;
   left: -5px;
   bottom: -23px;
-}
-
-.nav-button {
-  border: 1px solid lightgray;
-  border-radius: 18px;
+  z-index: -1;
 }
 
 .portfolio-title-text {
@@ -126,7 +130,10 @@
   top: 0;
 }
 
-.mini-chart {
-  width: 50%;
-  position: relative;
+.bg-white {
+  background-color: white;
+  z-index: 1;
+  border-radius: 5px;
+  padding-right: 5px;
 }
+

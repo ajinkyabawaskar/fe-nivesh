@@ -20,6 +20,8 @@ import { AuthInterceptorProviders } from './interceptors/auth.interceptor';
 import { ErrorInterceptorProviders } from './interceptors/error.interceptor';
 import { SidebarComponent } from './nivesh/sidebar/sidebar.component';
 import { ChartsModule } from 'ng2-charts';
+import { TopbarComponent } from './nivesh/topbar/topbar.component';
+import { BottombarComponent } from './nivesh/bottombar/bottombar.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,8 @@ import { ChartsModule } from 'ng2-charts';
     SigninDialogue,
     SignupDialogue,
     SidebarComponent,
+    TopbarComponent,
+    BottombarComponent,
   ],
   imports: [
     BrowserModule,

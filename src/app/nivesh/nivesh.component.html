@@ -1,28 +1,15 @@
-<mat-toolbar class="d-flex justify-content-between navbar-bg sticky-top nav-margin">
-    <div class="app-title" routerLink="/">
-        {{title}}
-    </div>
-
-    <div class="d-flex align-items-center" *ngIf="!isMobile">
-        <ng-container *ngFor="let item of [1,2,3]">
-            <button mat-flat-button class="nav-button ms-3">
-                Nav Menu #{{item}}
-            </button>
-        </ng-container>
-    </div>
-
-</mat-toolbar>
+<app-topbar [title]="title" [isMobile]="isMobile"></app-topbar>
 
 <div class="container-fluid mt-3">
     <div class="row">
         <div class="col-lg-2 col-md-3" *ngIf="!isMobile">
             <div class="mb-4">
-                <app-sidebar></app-sidebar>
+                <app-sidebar [sidebarMenus]="navigationMenus"></app-sidebar>
             </div>
         </div>
         <div class="col-lg-10 col-md-9">
             <div class="mb-4">
-                <div class="container">
+                <div class="container-fluid px-1 px-sm-3">
                     <div class="row">
                         <div class="col-12">
                             <div class="mb-4 portfolio-title-text">
@@ -38,7 +25,7 @@
                                         <div class="total-portfolio-amount-text mb-1">
                                             Net Worth
                                         </div>
-                                        <div class="">
+                                        <div class="bg-white">
                                             <span class="portfolio-amount-rupee-sign">₹</span>2,45,832.79
                                         </div>
                                     </div>
@@ -46,12 +33,12 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-sm-6">
+                        <div class="col-lg-3 col-sm-6 col-6">
                             <div class="mb-4">
                                 <div class="fancy p-0">
                                     <div class="m-3">
                                         <div class="beta-title-text mb-2">
-                                            Beta 
+                                            Beta
                                         </div>
                                         <div class="beta-value mt-1">
                                             {{this.betaValue}}
@@ -63,12 +50,12 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-sm-6">
+                        <div class="col-lg-3 col-sm-6 col-6">
                             <div class="mb-4">
                                 <div class="fancy p-0">
                                     <div class="m-3">
                                         <div class="beta-title-text mb-2">
-                                            PE Ratio 
+                                            PE Ratio
                                         </div>
                                         <div class="beta-value mt-1">
                                             {{this.peValue}}
@@ -81,8 +68,20 @@
                             </div>
                         </div>
                     </div>
+                    <div class="row">
+                        <ng-container *ngFor="let item of ['Temporary', 'Short Term', 'Long Term']">
+                            <div class="col-lg-4">
+                                <div class="mb-4">
+                                    <div class="fancy p-3">
+                                        {{item}}
+                                    </div>
+                                </div>
+                            </div>
+                        </ng-container>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<app-bottombar *ngIf="isMobile" [bottomNavs]="navigationMenus"></app-bottombar>
